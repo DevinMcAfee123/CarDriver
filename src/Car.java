@@ -17,7 +17,9 @@ public class Car {
 	public boolean equals(Object o) {
 		if (o instanceof Car) {
 			System.out.println("They are the same instance");
-			return this.equals(o);
+			//I already know this is a car so I will act accordingly
+			
+			return this.equals((Car) o);
 		}
 		else {
 			return false;
@@ -25,8 +27,12 @@ public class Car {
 		
 	}
 	
+	public int milesToGo(int milesDriven) { 
+		return range-milesDriven;
+	}
+	
 	@Override
 	public String toString() {
-		return  Integer.toString(range);
+		return "This vehicle has a range of " + Integer.toString(range) + " miles";
 	}
 }
