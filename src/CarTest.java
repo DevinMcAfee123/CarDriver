@@ -53,8 +53,16 @@ public class CarTest {
 	public void testMilesToGo() { 
 		int milesDriven = 10;
 		int expected = 90;
-		int actual = car.milesToGo(10);
+		int actual = car.milesToGo(milesDriven);
 		assertEquals(expected, actual);
+	}
+	
+	@Test
+	public void testNumHoursDriven() { 
+		int milesDriven = 80;
+		int averageSpeed = 40;
+		assertEquals(2, car.numHoursDriven(averageSpeed, milesDriven));
+		
 	}
 
 }

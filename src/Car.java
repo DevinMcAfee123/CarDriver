@@ -27,6 +27,10 @@ public class Car {
 		
 	}
 	
+	public int numHoursDriven(int averageSpeed, int milesDriven) { 
+		return milesDriven/averageSpeed;
+	}
+	
 	public int milesToGo(int milesDriven) { 
 		return range-milesDriven;
 	}
